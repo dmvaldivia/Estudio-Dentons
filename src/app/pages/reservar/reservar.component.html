@@ -3,13 +3,27 @@
         <div class="col-6">
             <form  [formGroup]="reservarForm">
                 <div class="form-group">
-                    <label></label>
+                    <label>Nombre: </label>
+                    <input type="text" formControlName="firstname" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label>Apellido: </label>
+                    <input type="text" formControlName="lastname" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label>Correo: </label>
+                    <input type="text" formControlName="email" class="form-control">
                 </div>
                 <div class="form-group">
+                    <label>Fecha: </label>
+                    <input type="text" formControlName="date" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>Mensaje: </label>
+                    <textarea formControlName="message" rows="3" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info">Reservar</button>
                 </div>
 
             </form>

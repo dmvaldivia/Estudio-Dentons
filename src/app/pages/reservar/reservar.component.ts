@@ -10,12 +10,17 @@ export class ReservarComponent implements OnInit {
 
   reservarForm = this.fb.group({
     firtsname: [''],
-    lastsname: [''],
+    lastname: [''],
     email: [''],
-    date: ['']
+    date: [''],
+    message: ['']
   });
 
   constructor(private fb: FormBuilder) { }
+
+onSubmit() {
+  console.log(this.reservarForm);
+}
 
   ngOnInit(): void {
   }
