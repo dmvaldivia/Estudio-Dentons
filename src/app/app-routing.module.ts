@@ -6,6 +6,7 @@ import { EspecialidadComponent } from "./pages/especialidad/especialidad.compone
 
 import { InicioComponent } from "./pages/inicio/inicio.component";
 import { ProcesosComponent } from "./pages/procesos/procesos.component";
+import { ReservarComponent } from "./pages/reservar/reservar.component";
 import { TarifasComponent } from "./pages/tarifas/tarifas.component";
 
 const routes: Routes = [
@@ -14,7 +15,9 @@ const routes: Routes = [
     { path: 'adjuntar', component: AdjuntarComponent },
     { path: 'especialidad', component: EspecialidadComponent },
     { path: 'procesos', component: ProcesosComponent },
-    { path: 'tarifas', component: TarifasComponent }
+    { path: 'tarifas', component: TarifasComponent },
+    { path: 'reservar', component: ReservarComponent },
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' }
 
 ];
 

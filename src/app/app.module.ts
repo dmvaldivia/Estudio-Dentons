@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
@@ -9,6 +10,8 @@ import { EspecialidadComponent } from './pages/especialidad/especialidad.compone
 import { ProcesosComponent } from './pages/procesos/procesos.component';
 import { TarifasComponent } from './pages/tarifas/tarifas.component';
 import { AdjuntarComponent } from './pages/adjuntar/adjuntar.component';
+import { ReservarComponent } from './pages/reservar/reservar.component';
+
 
 
 @NgModule({
@@ -19,11 +22,13 @@ import { AdjuntarComponent } from './pages/adjuntar/adjuntar.component';
     EspecialidadComponent,
     ProcesosComponent,
     TarifasComponent,
-    AdjuntarComponent
+    AdjuntarComponent,
+    ReservarComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
