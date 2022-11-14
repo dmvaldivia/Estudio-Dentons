@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-reservar',
@@ -9,17 +9,24 @@ import { FormBuilder } from '@angular/forms';
 export class ReservarComponent implements OnInit {
 
   reservarForm = this.fb.group({
-    firtsname: [''],
-    lastname: [''],
-    email: [''],
-    date: [''],
+    person: this.fb.group({
+      firstname: ['', Validators.required],
+      lastname: ['',Validators.required]
+    }),
+    email: ['',[Validators.required, Validators.email]],
+    date: ['', Validators.required],
     message: ['']
   });
 
   constructor(private fb: FormBuilder) { }
 
 onSubmit() {
-  console.log(this.reservarForm);
+  if(this.reservarForm.valid) {
+    console.log(this.reservarForm.value);
+  } else {
+    alert("formulario no valido");
+  }
+
 }
 
   ngOnInit(): void {

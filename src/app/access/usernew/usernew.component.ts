@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-procesos',
-  templateUrl: './procesos.component.html',
-  styleUrls: ['./procesos.component.css']
+  selector: 'app-usernew',
+  templateUrl: './usernew.component.html',
+  styleUrls: ['./usernew.component.css']
 })
-export class ProcesosComponent implements OnInit {
+export class UsernewComponent implements OnInit {
 
-  proceososForm = this.fb.group({
+  usernewForm = this.fb.group({
 
    
     dni: ['', Validators.required],
@@ -22,11 +22,11 @@ export class ProcesosComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   onSubmit() {
-    if(this.proceososForm.valid){
-      console.log(this.proceososForm.value);
+    if(this.usernewForm.valid){
+      console.log(this.usernewForm.value);
 
     }else{
-      alert("reporte no valido");
+      alert("usuario no valido");
     }
   }
 

@@ -11,6 +11,8 @@ import { ProcesosComponent } from './pages/procesos/procesos.component';
 import { TarifasComponent } from './pages/tarifas/tarifas.component';
 import { AdjuntarComponent } from './pages/adjuntar/adjuntar.component';
 import { ReservarComponent } from './pages/reservar/reservar.component';
+import { LoginComponent } from './access/login/login.component';
+import { UsernewComponent } from './access/usernew/usernew.component';
 
 
 
@@ -23,7 +25,9 @@ import { ReservarComponent } from './pages/reservar/reservar.component';
     ProcesosComponent,
     TarifasComponent,
     AdjuntarComponent,
-    ReservarComponent
+    ReservarComponent,
+    LoginComponent,
+    UsernewComponent
   ],
   imports: [
     BrowserModule,
