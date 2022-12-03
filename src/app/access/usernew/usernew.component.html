@@ -1,11 +1,45 @@
-<div class="login-dark" style="background-image: url(&quot;assets/img/backgrounds/form-bg.jpg&quot;);">
-    <form [formGroup]="usernewForm" style="background-color: rgba(255,255,255,0.9);">
-        <h2 class="text-center" style="color: #ffa555;font-size: 26px; margin-bottom:20px;">Registrar<br>Usuario</h2>
-        <div class="form-group"><input class="form-control" type="text" formControlName="dni" placeholder="DNI" autocomplete="off" style="color: rgb(0,0,0);"><small class="form-text text-danger d-none">Please enter a correct email address.</small></div>
-        <div class="form-group"><input class="form-control" type="text" formControlName="name" placeholder="Nombres" autocomplete="off" style="color: rgb(0,0,0);"><small class="form-text text-danger d-none">Please enter a correct email address.</small></div>
-        <div class="form-group"><input class="form-control" type="text" formControlName="lastname" placeholder="Apellidos" autocomplete="off" style="color: rgb(0,0,0);"><small class="form-text text-danger d-none">Please enter a correct email address.</small></div>
-        <div class="form-group"><select class="form-control form-control-sm" formControlName="perfil" style="color: rgb(0,0,0);"><option value="12" selected="">Tipo de Usuario</option><option value="13">Administrador</option><option value="14">Cliente</option><option value="14">Gerente</option></select></div>
-        <div
-            class="form-group text-center"><button (click)="onSubmit()"class="btn btn-primary" type="submit" style="background-color: #ffa555;font-weight: normal;">Registrar</button></div>
-</form>
+<div class="login-register-area mtb-60px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 ml-auto mr-auto">
+                <div class="login-register-wrapper">
+                    <div class="login-register-tab-list nav"> 
+                               <div class="tab-content">
+                                    <div id="lg1" class="tab-pane active">
+                                        <div class="login-form-container">
+
+                                            <div class="login-dark" style="background-image: url(&quot;assets/img/backgrounds/form-bg.jpg&quot;);">
+                                                <form [formGroup]="usernewForm" method="post" style="background-color: rgba(255, 255, 255, 0.9); width: 400px; margin: 0 auto;">
+                                                    <h2 class="text-center" style="color: #dac50e;font-size: 26px; margin-bottom:20px;">¿No estas registrado?<br></h2>
+                                                    <h4 class="text-center" style="color: #e2bd1a;font-size: 20px; margin-bottom:20px;">Completa el siguiente formulario<br></h4>
+
+                                                    <div class="form-group"><input class="form-control" type="text" formControlName="loginUsuario" placeholder="Login" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><input class="form-control" type="Password" formControlName="passwordUsuario" placeholder="Password" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><input class="form-control" type="text" formControlName="documentoIdentidad" placeholder="DNI" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><input class="form-control" type="email" formControlName="correoElectronico" placeholder="email" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><input class="form-control" type="text" formControlName="nombres" placeholder="Nombres" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><input class="form-control" type="text" formControlName="apellidoPaterno" placeholder="Apellido Paterno" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><input class="form-control" type="text" formControlName="apellidoMaterno" placeholder="Apellido Materno" autocomplete="off" style="color: rgb(0,0,0);"></div>
+                                                    <div class="form-group"><select class="form-control form-control-sm" formControlName="idPerfil" style="color: rgb(0,0,0);"><option value="12" selected="">Tipo de Usuario</option><option value=13>Administrador</option><option value="14">Cliente</option></select></div>
+                                                    <div class="form-check"><input class="form-check-input" type="checkbox" formControlName="condiciones" placeholder="Condiciones" value="14" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            <p><a routerLink="/terminos" target="_blank">Acepto los terminos y condiciones</a></p>
+                                                        </label>
+                                                    </div><br>
+                                                    <!--<re-captcha #captchaElem siteKey="6LdEKFgbAAAAALr0qfHH6dHlEnURxNPfzsFwi4m3">
+                                                    </re-captcha><br>-->
+  
+                                                    <div class="d-grid gap-2 d-md-block"><button (click)="onSubmit()" class="btn btn-warning btn-block" type="submit" style=" margin: 0 auto; width: 200px">Registrarme</button></div>  
+                                                    
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                              </div>
+                    </div>                 
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+

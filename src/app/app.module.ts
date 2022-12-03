@@ -16,6 +16,7 @@ import { UsernewComponent } from './access/usernew/usernew.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { UsernewComponent } from './access/usernew/usernew.component';
     AdjuntarComponent,
     ReservarComponent,
     LoginComponent,
-    UsernewComponent
+    UsernewComponent,
+
   ],
   imports: [
     BrowserModule,
